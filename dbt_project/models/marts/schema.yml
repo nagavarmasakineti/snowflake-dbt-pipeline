@@ -1,0 +1,10 @@
+version: 2
+
+models:
+- name: fct_patient_summary
+  description: "Summary of the patients"
+  columns:
+   - name: patient_id
+     tests:
+      - unique
+      - not_null

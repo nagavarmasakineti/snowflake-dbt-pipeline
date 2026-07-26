@@ -1,0 +1,11 @@
+WITH source AS (
+    SELECT * FROM {{source('raw_data', 'RAW_VISITS')}}
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source

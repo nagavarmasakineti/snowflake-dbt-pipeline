@@ -1,0 +1,15 @@
+# dbt generated folders
+target/
+dbt_packages/
+logs/
+
+# Sensitive credentials
+profiles.yml
+
+# Operating system files
+.DS_Store
+Thumbs.dbt
+
+# Virtual environment (if inside project)
+venv/
+.venv/

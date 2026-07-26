@@ -1,0 +1,1690 @@
+[0m15:17:23.865963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D09492B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D305FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D305F9D0>]}
+
+
+============================== 15:17:23.949324 | 65e2a188-0814-4932-911a-00bbf6530ac3 ==============================
+[0m15:17:23.949324 [info ] [MainThread]: Running with dbt=1.12.0
+[0m15:17:23.962407 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m15:17:24.393427 [info ] [MainThread]: dbt version: 1.12.0
+[0m15:17:24.407997 [info ] [MainThread]: python version: 3.13.14
+[0m15:17:24.417980 [info ] [MainThread]: python path: C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Scripts\python.exe
+[0m15:17:24.429421 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m15:17:32.476193 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m15:17:32.478567 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m15:17:32.480694 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m15:17:51.000344 [info ] [MainThread]: Using profiles dir at C:\Users\user\.dbt
+[0m15:17:51.002895 [info ] [MainThread]: Using profiles.yml file at C:\Users\user\.dbt\profiles.yml
+[0m15:17:51.005218 [info ] [MainThread]: Using dbt_project.yml file at C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\dbt_project.yml
+[0m15:17:51.010250 [info ] [MainThread]: adapter type: snowflake
+[0m15:17:51.015043 [info ] [MainThread]: adapter version: 1.12.0
+[0m15:17:51.616055 [info ] [MainThread]: Configuration:
+[0m15:17:51.617951 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:17:51.620684 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:17:51.622389 [info ] [MainThread]: Required dependencies:
+[0m15:17:51.624961 [debug] [MainThread]: Executing "git --help"
+[0m15:17:51.801836 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:17:51.806764 [debug] [MainThread]: STDERR: "b''"
+[0m15:17:51.809125 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:17:51.812098 [info ] [MainThread]: Connection:
+[0m15:17:51.814162 [info ] [MainThread]:   account: YFPIYNR-DR34391
+[0m15:17:51.816027 [info ] [MainThread]:   user: NSAKINETI
+[0m15:17:51.818552 [info ] [MainThread]:   database: HEALTHCARE_ANALYTICS
+[0m15:17:51.820854 [info ] [MainThread]:   warehouse: TRANSFORM_WH
+[0m15:17:51.822956 [info ] [MainThread]:   role: TRANSFORM_ROLE
+[0m15:17:51.825172 [info ] [MainThread]:   schema: STG
+[0m15:17:51.828434 [info ] [MainThread]:   authenticator: None
+[0m15:17:51.831604 [info ] [MainThread]:   oauth_client_id: None
+[0m15:17:51.836215 [info ] [MainThread]:   query_tag: None
+[0m15:17:51.842411 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:17:51.845250 [info ] [MainThread]:   host: None
+[0m15:17:51.846465 [info ] [MainThread]:   port: None
+[0m15:17:51.847994 [info ] [MainThread]:   proxy_host: None
+[0m15:17:51.856006 [info ] [MainThread]:   proxy_port: None
+[0m15:17:51.859222 [info ] [MainThread]:   protocol: None
+[0m15:17:51.862862 [info ] [MainThread]:   connect_retries: 1
+[0m15:17:51.865155 [info ] [MainThread]:   connect_timeout: None
+[0m15:17:51.870367 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:17:51.881850 [info ] [MainThread]:   retry_all: False
+[0m15:17:51.886467 [info ] [MainThread]:   insecure_mode: False
+[0m15:17:51.891530 [info ] [MainThread]:   reuse_connections: True
+[0m15:17:51.892885 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m15:17:51.894423 [info ] [MainThread]:   workload_identity_provider: None
+[0m15:17:51.896485 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m15:17:51.904501 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m15:17:51.907906 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m15:17:53.980414 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:17:54.001026 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:17:54.003014 [debug] [MainThread]: On debug: select 1 as id
+[0m15:17:54.004292 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:18:00.502894 [debug] [MainThread]: SQL status: SUCCESS 1 in 6.498 seconds
+[0m15:18:00.513119 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:18:00.525824 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:18:00.534999 [debug] [MainThread]: Command `dbt debug` succeeded at 15:18:00.533982 after 37.26 seconds
+[0m15:18:00.540211 [debug] [MainThread]: Connection 'debug' was left open.
+[0m15:18:00.546222 [debug] [MainThread]: On debug: Close
+[0m15:18:00.766807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D4AE6650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D4B3A0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000141D4AA2580>]}
+[0m15:18:00.769132 [debug] [MainThread]: Flushing usage events
+[0m15:18:03.051521 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:13:53.434164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214D88992B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DB013D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DB0139D0>]}
+
+
+============================== 20:13:53.517926 | fd001d69-cb80-48f7-a8d0-5908923a79ed ==============================
+[0m20:13:53.517926 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:13:53.525282 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:14:03.522639 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:14:03.524697 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:14:03.528057 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:14:07.621474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fd001d69-cb80-48f7-a8d0-5908923a79ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214D8F75A70>]}
+[0m20:14:08.159984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fd001d69-cb80-48f7-a8d0-5908923a79ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DC92FF00>]}
+[0m20:14:08.175241 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:14:10.378834 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:14:10.384725 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:14:10.387939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'fd001d69-cb80-48f7-a8d0-5908923a79ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DC5E3650>]}
+[0m20:14:10.416747 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Parsing Error
+  Error reading dbt_project: marts\schema.yml - Runtime Error
+    Syntax error near line 5
+    ------------------------------
+    2  | 
+    3  | models:
+    4  | -name: fct_patient_summary
+    5  |  description: "Summary of the patients"
+    6  |  columns:
+    7  |   -name: patient_id
+    8  |    tests:
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 5, column 13
+[0m20:14:10.425853 [debug] [MainThread]: Command `dbt run` failed at 20:14:10.425040 after 17.74 seconds
+[0m20:14:10.429061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DCA50AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DCA50C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214DAE83E70>]}
+[0m20:14:10.431784 [debug] [MainThread]: Flushing usage events
+[0m20:14:13.115941 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:16:43.269699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FCDE92B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FF553D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FF5539D0>]}
+
+
+============================== 20:16:43.287133 | 9059a4f5-efa4-4d4b-b687-a96f02a8f0e6 ==============================
+[0m20:16:43.287133 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:16:43.290614 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:16:45.451573 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:16:45.452812 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:16:45.453832 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:16:46.237033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FD4B5A70>]}
+[0m20:16:46.403719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028780F6FF00>]}
+[0m20:16:46.406571 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:16:47.244266 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:16:47.246428 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:16:47.247852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028780C23650>]}
+[0m20:17:05.966245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FDA26030>]}
+[0m20:17:06.281703 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:17:06.531751 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:17:07.015089 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:17:07.177651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028782824050>]}
+[0m20:17:07.182183 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:17:07.200076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028781619E60>]}
+[0m20:17:07.239827 [info ] [MainThread]: 
+[0m20:17:07.244214 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:17:07.277899 [info ] [MainThread]: 
+[0m20:17:07.288687 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:17:07.343818 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:17:07.404065 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:17:07.405422 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:17:07.406853 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:17:09.579148 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.172 seconds
+[0m20:17:09.601009 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:17:09.658992 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:17:09.660442 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:17:09.661686 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:17:10.580507 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.919 seconds
+[0m20:17:10.623612 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:17:10.625299 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:17:10.737413 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.110 seconds
+[0m20:17:10.747926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028782A15E50>]}
+[0m20:17:11.042784 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_patients
+[0m20:17:11.046055 [debug] [Thread-4 (]: Began running node model.dbt_project.stg_visits
+[0m20:17:11.048464 [debug] [Thread-2 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:17:11.051264 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:17:11.054870 [info ] [Thread-4 (]: 3 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:17:11.071175 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:17:11.078295 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:17:11.086836 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:17:11.060790 [info ] [Thread-2 (]: 1 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:17:11.096521 [debug] [Thread-4 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:17:11.132610 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:17:11.167770 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:17:11.187582 [debug] [Thread-2 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:17:11.180037 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:17:11.217619 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_patients
+[0m20:17:11.243462 [debug] [Thread-4 (]: Began executing node model.dbt_project.stg_visits
+[0m20:17:11.535641 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:17:11.578729 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:17:11.606722 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:17:11.610827 [debug] [Thread-3 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_case(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:17:11.613046 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:17:11.619531 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:17:11.622908 [debug] [Thread-4 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_case(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:17:11.626278 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:17:11.813904 [debug] [Thread-2 (]: Compilation Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  'refer' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m20:17:11.837779 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028782D65180>]}
+[0m20:17:11.839474 [error] [Thread-2 (]: 1 of 3 ERROR creating sql table model STG.fct_patient_summary .................. [[31mERROR[0m in 0.69s]
+[0m20:17:11.847553 [debug] [Thread-2 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:17:11.854207 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.fct_patient_summary' to be skipped because of status 'error'.  Reason: Compilation Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  'refer' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m20:17:12.498626 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c5f851-0002-48c2-000e-3112000b01fe
+[0m20:17:12.500162 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 13 at position 24 unexpected 'AS'.
+syntax error line 13 at position 24 unexpected 'AS'.
+[0m20:17:12.538955 [debug] [Thread-4 (]: Database Error in model stg_visits (models\staging\stg_visits.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 24 unexpected 'AS'.
+  syntax error line 13 at position 24 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_visits.sql
+[0m20:17:12.543476 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028782D725D0>]}
+[0m20:17:12.547443 [error] [Thread-4 (]: 3 of 3 ERROR creating sql view model STG.stg_visits ............................ [[31mERROR[0m in 1.46s]
+[0m20:17:12.550915 [debug] [Thread-4 (]: Finished running node model.dbt_project.stg_visits
+[0m20:17:12.554516 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.stg_visits' to be skipped because of status 'error'.  Reason: Database Error in model stg_visits (models\staging\stg_visits.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 24 unexpected 'AS'.
+  syntax error line 13 at position 24 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_visits.sql.
+[0m20:17:12.660395 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c5f851-0002-495a-000e-3112000ae572
+[0m20:17:12.661900 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 15 at position 17 unexpected 'AS'.
+syntax error line 15 at position 17 unexpected 'AS'.
+[0m20:17:12.713773 [debug] [Thread-3 (]: Database Error in model stg_patients (models\staging\stg_patients.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 17 unexpected 'AS'.
+  syntax error line 15 at position 17 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_patients.sql
+[0m20:17:12.717725 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9059a4f5-efa4-4d4b-b687-a96f02a8f0e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028782C048D0>]}
+[0m20:17:12.722311 [error] [Thread-3 (]: 2 of 3 ERROR creating sql view model STG.stg_patients .......................... [[31mERROR[0m in 1.65s]
+[0m20:17:12.727129 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_patients
+[0m20:17:12.729413 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.stg_patients' to be skipped because of status 'error'.  Reason: Database Error in model stg_patients (models\staging\stg_patients.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 17 unexpected 'AS'.
+  syntax error line 15 at position 17 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_patients.sql.
+[0m20:17:12.741458 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:17:12.744952 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:17:12.748461 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:17:12.916433 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:17:12.920117 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:17:13.063780 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:17:13.065642 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:17:13.194317 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:17:13.196495 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:17:13.362643 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was properly closed.
+[0m20:17:13.364915 [info ] [MainThread]: 
+[0m20:17:13.367899 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.08 seconds (6.08s).
+[0m20:17:13.374086 [debug] [MainThread]: Command end result
+[0m20:17:13.731290 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:17:13.743951 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:17:13.781400 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:17:13.828900 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:17:13.830260 [info ] [MainThread]: 
+[0m20:17:13.842308 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m20:17:13.855402 [info ] [MainThread]: 
+[0m20:17:13.863681 [error] [MainThread]: [[31mERROR[0m]: in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+[0m20:17:13.866087 [error] [MainThread]:   Compilation Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  'refer' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m20:17:13.872324 [info ] [MainThread]: 
+[0m20:17:13.878859 [error] [MainThread]: [[31mERROR[0m]: in model stg_visits (models\staging\stg_visits.sql)
+[0m20:17:13.883834 [error] [MainThread]:   Database Error in model stg_visits (models\staging\stg_visits.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 13 at position 24 unexpected 'AS'.
+  syntax error line 13 at position 24 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_visits.sql
+[0m20:17:13.898640 [info ] [MainThread]: 
+[0m20:17:13.901166 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\staging\stg_visits.sql
+[0m20:17:13.910331 [info ] [MainThread]: 
+[0m20:17:13.916385 [error] [MainThread]: [[31mERROR[0m]: in model stg_patients (models\staging\stg_patients.sql)
+[0m20:17:13.928732 [error] [MainThread]:   Database Error in model stg_patients (models\staging\stg_patients.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 17 unexpected 'AS'.
+  syntax error line 15 at position 17 unexpected 'AS'.
+  compiled code at target\run\dbt_project\models\staging\stg_patients.sql
+[0m20:17:13.930223 [info ] [MainThread]: 
+[0m20:17:13.945924 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\staging\stg_patients.sql
+[0m20:17:13.950526 [info ] [MainThread]: 
+[0m20:17:13.964739 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:17:13.975544 [debug] [MainThread]: Command `dbt run` failed at 20:17:13.975015 after 31.24 seconds
+[0m20:17:13.978125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FF58B3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FF352F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FDB29F70>]}
+[0m20:17:13.979883 [debug] [MainThread]: Flushing usage events
+[0m20:17:15.900246 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:22:01.920752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE32F992B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE35703D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE357039D0>]}
+
+
+============================== 20:22:01.941472 | 5162dade-a395-4c20-90c4-6b4f08678d38 ==============================
+[0m20:22:01.941472 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:22:01.944011 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:22:03.994388 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:22:03.995772 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:22:03.996959 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:22:04.897100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE33669A70>]}
+[0m20:22:05.080433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE3702FF00>]}
+[0m20:22:05.083850 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:22:06.057619 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:22:06.754528 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m20:22:06.755965 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\staging\stg_visits.sql
+[0m20:22:06.757169 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\fct_patient_summary.sql
+[0m20:22:06.759225 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\staging\stg_patients.sql
+[0m20:22:08.331787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE388F4F50>]}
+[0m20:22:08.668794 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:22:08.675442 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:22:08.742700 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:22:08.765934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE3858B020>]}
+[0m20:22:08.766946 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:22:08.767919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38ACC9F0>]}
+[0m20:22:08.772396 [info ] [MainThread]: 
+[0m20:22:08.773447 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:22:08.774518 [info ] [MainThread]: 
+[0m20:22:08.776536 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:22:08.787856 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:22:08.814537 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:22:08.815217 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:22:08.815706 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:22:10.043359 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.227 seconds
+[0m20:22:10.049977 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:22:10.107491 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:22:10.108301 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:22:10.109361 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:22:10.606350 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.497 seconds
+[0m20:22:10.669400 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:22:10.680039 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:22:10.786858 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.103 seconds
+[0m20:22:10.797397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38AD6270>]}
+[0m20:22:10.814937 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:22:10.817655 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:22:10.821847 [info ] [Thread-2 (]: 1 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:22:10.829669 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:22:10.825207 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:22:10.837275 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:22:10.844278 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:22:10.876053 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:22:10.921010 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:22:10.924389 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:22:10.929511 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:22:10.956913 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:22:11.209700 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:22:11.213253 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:22:11.221408 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:22:11.224345 [debug] [Thread-3 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:22:11.230630 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:22:11.232151 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:22:11.233845 [debug] [Thread-2 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_cast(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:22:11.235779 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:22:12.561546 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.329 seconds
+[0m20:22:12.686054 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38BEFDD0>]}
+[0m20:22:12.688606 [info ] [Thread-3 (]: 2 of 3 OK created sql view model STG.stg_visits ................................ [[32mSUCCESS 1[0m in 1.83s]
+[0m20:22:12.694093 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:22:12.965557 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.729 seconds
+[0m20:22:12.985184 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38D9F330>]}
+[0m20:22:12.990572 [info ] [Thread-2 (]: 1 of 3 OK created sql view model STG.stg_patients .............................. [[32mSUCCESS 1[0m in 2.16s]
+[0m20:22:12.996526 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:22:13.003208 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:22:13.009168 [info ] [Thread-4 (]: 3 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:22:13.014451 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:22:13.018988 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:22:13.045296 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:22:13.058609 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:22:13.218058 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.fct_patient_summary"
+[0m20:22:13.225340 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.fct_patient_summary"
+[0m20:22:13.227427 [debug] [Thread-4 (]: On model.dbt_project.fct_patient_summary: create or replace transient table HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+    
+    
+    
+    
+    
+
+    as (WITH patient AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_patients
+)
+visit AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_visits
+)
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name,
+    p.gender,
+    p.birth_date,
+    COUNT(v.visit_id) AS total_visits,
+    NVL(SUM(v.total_amount), 0) AS total_spent,
+    MAX(v.visit_date) AS latest_visit_date
+FROM patient p
+LEFT JOIN visit V on p.patient_id = v.patient_id
+GROUP BY 1,2,3,4
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.fct_patient_summary"} */;
+[0m20:22:13.228827 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:22:13.792942 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c5f856-0002-48c2-000e-3112000b020e
+[0m20:22:13.796453 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 11 at position 0 unexpected 'visit'.
+syntax error line 14 at position 0 unexpected 'SELECT'.
+[0m20:22:13.845938 [debug] [Thread-4 (]: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:22:13.850331 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5162dade-a395-4c20-90c4-6b4f08678d38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38DA7BB0>]}
+[0m20:22:13.856757 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model STG.fct_patient_summary .................. [[31mERROR[0m in 0.84s]
+[0m20:22:13.861742 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:22:13.866736 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.fct_patient_summary' to be skipped because of status 'error'.  Reason: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql.
+[0m20:22:13.873564 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:22:13.875130 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:22:13.876706 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:22:14.016065 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:22:14.018849 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:22:14.147736 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:22:14.149504 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:22:14.292105 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:22:14.296213 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:22:14.461808 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was left open.
+[0m20:22:14.463121 [debug] [MainThread]: On model.dbt_project.fct_patient_summary: Close
+[0m20:22:14.599803 [info ] [MainThread]: 
+[0m20:22:14.603503 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.82 seconds (5.82s).
+[0m20:22:14.610082 [debug] [MainThread]: Command end result
+[0m20:22:14.891708 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:22:14.906157 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:22:14.918827 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:22:14.940657 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:22:14.941928 [info ] [MainThread]: 
+[0m20:22:14.943486 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:22:14.945029 [info ] [MainThread]: 
+[0m20:22:14.946924 [error] [MainThread]: [[31mERROR[0m]: in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+[0m20:22:14.950069 [error] [MainThread]:   Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:22:14.952408 [info ] [MainThread]: 
+[0m20:22:14.955781 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:22:14.958612 [info ] [MainThread]: 
+[0m20:22:14.962787 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:22:14.975467 [debug] [MainThread]: Command `dbt run` failed at 20:22:14.972396 after 13.62 seconds
+[0m20:22:14.980964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE375762D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE38AA43D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE3573B3F0>]}
+[0m20:22:14.985938 [debug] [MainThread]: Flushing usage events
+[0m20:22:17.469957 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:23:04.478092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA3FFC92B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA42733D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA427339D0>]}
+
+
+============================== 20:23:04.492121 | 1960a9f7-9711-47ff-a298-d740265ea5a8 ==============================
+[0m20:23:04.492121 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:23:04.494538 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:23:06.081942 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:23:06.084239 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:23:06.085629 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:23:07.189765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA40699A70>]}
+[0m20:23:07.419756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4400FF00>]}
+[0m20:23:07.423719 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:23:08.670436 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:23:09.347137 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:23:09.350170 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\fct_patient_summary.sql
+[0m20:23:11.052380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA458D8F50>]}
+[0m20:23:11.277941 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:23:11.284086 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:23:11.353802 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:23:11.380338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4459B110>]}
+[0m20:23:11.381421 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:23:11.382740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45A9C910>]}
+[0m20:23:11.386974 [info ] [MainThread]: 
+[0m20:23:11.388075 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:23:11.389714 [info ] [MainThread]: 
+[0m20:23:11.391987 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:23:11.407832 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:23:11.437409 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:23:11.438046 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:23:11.438534 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:23:12.767663 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.329 seconds
+[0m20:23:12.774329 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:23:12.807538 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:23:12.808113 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:23:12.808622 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:23:13.504826 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.696 seconds
+[0m20:23:13.549573 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:23:13.551334 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:23:13.652193 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.099 seconds
+[0m20:23:13.661731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45C454A0>]}
+[0m20:23:13.686563 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:23:13.692245 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:23:13.697625 [info ] [Thread-2 (]: 1 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:23:13.702282 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:23:13.711345 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:23:13.721062 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:23:13.724978 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:23:13.728343 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:23:13.805482 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:23:13.808168 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:23:13.813284 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:23:13.818428 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:23:14.093546 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:23:14.103335 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:23:14.111261 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:23:14.116782 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:23:14.118738 [debug] [Thread-3 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:23:14.120822 [debug] [Thread-2 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_cast(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:23:14.122417 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:23:14.123922 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:23:15.024573 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.902 seconds
+[0m20:23:15.057408 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.933 seconds
+[0m20:23:15.251284 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45BCFD10>]}
+[0m20:23:15.252975 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45D82BA0>]}
+[0m20:23:15.256873 [info ] [Thread-3 (]: 2 of 3 OK created sql view model STG.stg_visits ................................ [[32mSUCCESS 1[0m in 1.52s]
+[0m20:23:15.264081 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:23:15.260213 [info ] [Thread-2 (]: 1 of 3 OK created sql view model STG.stg_patients .............................. [[32mSUCCESS 1[0m in 1.53s]
+[0m20:23:15.269998 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:23:15.279014 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:23:15.281881 [info ] [Thread-4 (]: 3 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:23:15.290998 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:23:15.296120 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:23:15.338631 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:23:15.351581 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:23:15.477680 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.fct_patient_summary"
+[0m20:23:15.485406 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.fct_patient_summary"
+[0m20:23:15.487616 [debug] [Thread-4 (]: On model.dbt_project.fct_patient_summary: create or replace transient table HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+    
+    
+    
+    
+    
+
+    as (WITH patient AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_patients
+)
+visit AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_visits
+)
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name,
+    p.gender,
+    p.birth_date,
+    COUNT(v.visit_id) AS total_visits,
+    NVL(SUM(v.total_amount), 0) AS total_spent,
+    MAX(v.visit_date) AS latest_visit_date
+FROM patient p
+LEFT JOIN visit v on p.patient_id = v.patient_id
+GROUP BY 1,2,3,4
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.fct_patient_summary"} */;
+[0m20:23:15.489084 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:23:16.266990 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c5f857-0002-48c3-000e-3112000ad75e
+[0m20:23:16.269178 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 11 at position 0 unexpected 'visit'.
+syntax error line 14 at position 0 unexpected 'SELECT'.
+[0m20:23:16.310609 [debug] [Thread-4 (]: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:23:16.313239 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1960a9f7-9711-47ff-a298-d740265ea5a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45D8B110>]}
+[0m20:23:16.317017 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model STG.fct_patient_summary .................. [[31mERROR[0m in 1.02s]
+[0m20:23:16.328048 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:23:16.331821 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.fct_patient_summary' to be skipped because of status 'error'.  Reason: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql.
+[0m20:23:16.345918 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:23:16.353222 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:23:16.359336 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:23:16.523073 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:23:16.526723 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:23:16.689351 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:23:16.695046 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:23:16.843310 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:23:16.844246 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:23:16.968904 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was left open.
+[0m20:23:16.970961 [debug] [MainThread]: On model.dbt_project.fct_patient_summary: Close
+[0m20:23:17.119435 [info ] [MainThread]: 
+[0m20:23:17.123457 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.73 seconds (5.73s).
+[0m20:23:17.131146 [debug] [MainThread]: Command end result
+[0m20:23:17.447342 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:23:17.456592 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:23:17.463248 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:23:17.477106 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:23:17.478112 [info ] [MainThread]: 
+[0m20:23:17.479056 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:23:17.479820 [info ] [MainThread]: 
+[0m20:23:17.480653 [error] [MainThread]: [[31mERROR[0m]: in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+[0m20:23:17.482023 [error] [MainThread]:   Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 0 unexpected 'visit'.
+  syntax error line 14 at position 0 unexpected 'SELECT'.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:23:17.482966 [info ] [MainThread]: 
+[0m20:23:17.484546 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:23:17.486761 [info ] [MainThread]: 
+[0m20:23:17.487979 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:23:17.490837 [debug] [MainThread]: Command `dbt run` failed at 20:23:17.490539 after 13.49 seconds
+[0m20:23:17.491922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA44305FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA45A2C6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4276B3F0>]}
+[0m20:23:17.493265 [debug] [MainThread]: Flushing usage events
+[0m20:23:19.831360 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:25:05.569655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA20D592B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA234D3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA234D39D0>]}
+
+
+============================== 20:25:05.580650 | 2c656b35-d776-492e-a1eb-ad7fc9186941 ==============================
+[0m20:25:05.580650 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:25:05.582490 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:25:07.974663 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:25:07.975425 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:25:07.976003 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:25:08.749282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA21435A70>]}
+[0m20:25:08.931313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA24E07F00>]}
+[0m20:25:08.935092 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:25:10.277275 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:25:10.976227 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:25:10.977756 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\fct_patient_summary.sql
+[0m20:25:12.525319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA26614F50>]}
+[0m20:25:12.778599 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:25:12.786128 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:25:12.871816 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:25:12.901233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA252DB110>]}
+[0m20:25:12.902663 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:25:12.904566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA267DC910>]}
+[0m20:25:12.907890 [info ] [MainThread]: 
+[0m20:25:12.909685 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:25:12.911970 [info ] [MainThread]: 
+[0m20:25:12.914305 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:25:12.932487 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:25:12.970005 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:25:12.972276 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:25:12.973779 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:25:14.354099 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.380 seconds
+[0m20:25:14.363731 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:25:14.420873 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:25:14.424677 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:25:14.426670 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:25:15.285344 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.858 seconds
+[0m20:25:15.339581 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:25:15.342542 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:25:15.465249 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.120 seconds
+[0m20:25:15.475937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA269854A0>]}
+[0m20:25:15.500442 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:25:15.504662 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:25:15.508328 [info ] [Thread-2 (]: 1 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:25:15.511943 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:25:15.525151 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:25:15.532620 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:25:15.535172 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:25:15.541334 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:25:15.621393 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:25:15.633085 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:25:15.638519 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:25:15.653021 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:25:15.816655 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:25:15.817803 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:25:15.821509 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:25:15.822937 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:25:15.823551 [debug] [Thread-3 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:25:15.824488 [debug] [Thread-2 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_cast(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:25:15.825236 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:25:15.826149 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:25:16.599440 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.769 seconds
+[0m20:25:16.799962 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA2690FB90>]}
+[0m20:25:16.802009 [info ] [Thread-3 (]: 2 of 3 OK created sql view model STG.stg_visits ................................ [[32mSUCCESS 1[0m in 1.27s]
+[0m20:25:16.803834 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:25:16.878128 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.052 seconds
+[0m20:25:16.896840 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA269D7330>]}
+[0m20:25:16.899728 [info ] [Thread-2 (]: 1 of 3 OK created sql view model STG.stg_patients .............................. [[32mSUCCESS 1[0m in 1.38s]
+[0m20:25:16.906063 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:25:16.912558 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:25:16.918085 [info ] [Thread-4 (]: 3 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:25:16.924572 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:25:16.926842 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:25:16.950009 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:25:16.961566 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:25:17.161672 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.fct_patient_summary"
+[0m20:25:17.173745 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.fct_patient_summary"
+[0m20:25:17.176494 [debug] [Thread-4 (]: On model.dbt_project.fct_patient_summary: create or replace transient table HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+    
+    
+    
+    
+    
+
+    as (WITH patient AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_patients
+),
+visit AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_visits
+)
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name,
+    p.gender,
+    p.birth_date,
+    COUNT(v.visit_id) AS total_visits,
+    NVL(SUM(v.total_amount), 0) AS total_spent,
+    MAX(v.visit_date) AS latest_visit_date
+FROM patient p
+LEFT JOIN visit v on p.patient_id = v.patient_id
+GROUP BY 1,2,3,4
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.fct_patient_summary"} */;
+[0m20:25:17.179116 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:25:18.018235 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c5f859-0002-495a-000e-3112000ae59a
+[0m20:25:18.022054 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002022 (42601): SQL compilation error:
+Missing column specification
+[0m20:25:18.072499 [debug] [Thread-4 (]: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:25:18.076948 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c656b35-d776-492e-a1eb-ad7fc9186941', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA26B994F0>]}
+[0m20:25:18.080965 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model STG.fct_patient_summary .................. [[31mERROR[0m in 1.15s]
+[0m20:25:18.087416 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:25:18.092309 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.fct_patient_summary' to be skipped because of status 'error'.  Reason: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql.
+[0m20:25:18.106187 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:25:18.109628 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:25:18.111152 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:25:18.266778 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:25:18.269613 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:25:18.424684 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:25:18.426310 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:25:18.585636 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:25:18.588157 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:25:18.731846 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was left open.
+[0m20:25:18.739316 [debug] [MainThread]: On model.dbt_project.fct_patient_summary: Close
+[0m20:25:18.884474 [info ] [MainThread]: 
+[0m20:25:18.888800 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.97 seconds (5.97s).
+[0m20:25:18.897906 [debug] [MainThread]: Command end result
+[0m20:25:19.078967 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:25:19.085181 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:25:19.092180 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:25:19.105730 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:25:19.107446 [info ] [MainThread]: 
+[0m20:25:19.108473 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:25:19.109294 [info ] [MainThread]: 
+[0m20:25:19.110700 [error] [MainThread]: [[31mERROR[0m]: in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+[0m20:25:19.111938 [error] [MainThread]:   Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:25:19.112795 [info ] [MainThread]: 
+[0m20:25:19.113949 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:25:19.115639 [info ] [MainThread]: 
+[0m20:25:19.116760 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:25:19.118905 [debug] [MainThread]: Command `dbt run` failed at 20:25:19.118455 after 13.89 seconds
+[0m20:25:19.120704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA2673FB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA213E5950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA2350B3F0>]}
+[0m20:25:19.121756 [debug] [MainThread]: Flushing usage events
+[0m20:25:21.892716 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:27:59.659376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4B8AD2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4E013D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4E0139D0>]}
+
+
+============================== 20:27:59.669694 | 5860939d-6838-4e70-91a4-913866d03a6c ==============================
+[0m20:27:59.669694 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:27:59.671462 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:28:01.297643 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:28:01.299101 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:28:01.300329 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:28:02.125041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4BF79A70>]}
+[0m20:28:02.253859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4F927F00>]}
+[0m20:28:02.257628 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:28:03.223583 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:28:03.655301 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:28:03.656675 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\fct_patient_summary.sql
+[0m20:28:04.938110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F51134F50>]}
+[0m20:28:05.200704 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:28:05.215819 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:28:05.350562 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:28:05.376833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F50DCB110>]}
+[0m20:28:05.378106 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:28:05.379155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F51310910>]}
+[0m20:28:05.382447 [info ] [MainThread]: 
+[0m20:28:05.383407 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:28:05.384671 [info ] [MainThread]: 
+[0m20:28:05.389246 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:28:05.402479 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:28:05.435404 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:28:05.436644 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:28:05.438849 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:28:06.690297 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.252 seconds
+[0m20:28:06.701183 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:28:06.738327 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:28:06.739190 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:28:06.740287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:28:07.896374 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.156 seconds
+[0m20:28:07.945793 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:28:07.947989 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:28:08.056485 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.107 seconds
+[0m20:28:08.065754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F514A54A0>]}
+[0m20:28:08.088405 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:28:08.090441 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:28:08.092635 [info ] [Thread-2 (]: 1 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:28:08.101419 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:28:08.104288 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:28:08.097772 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:28:08.124218 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:28:08.145577 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:28:08.167471 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:28:08.182365 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:28:08.189228 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:28:08.236239 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:28:08.436061 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:28:08.440103 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:28:08.449685 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:28:08.452499 [debug] [Thread-2 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_cast(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:28:08.459119 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:28:08.461094 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:28:08.462752 [debug] [Thread-3 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:28:08.464602 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:28:09.295678 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.834 seconds
+[0m20:28:09.414848 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.950 seconds
+[0m20:28:09.486416 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F5142F7D0>]}
+[0m20:28:09.488164 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F514F7280>]}
+[0m20:28:09.491085 [info ] [Thread-2 (]: 1 of 3 OK created sql view model STG.stg_patients .............................. [[32mSUCCESS 1[0m in 1.36s]
+[0m20:28:09.494272 [info ] [Thread-3 (]: 2 of 3 OK created sql view model STG.stg_visits ................................ [[32mSUCCESS 1[0m in 1.35s]
+[0m20:28:09.497708 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:28:09.500734 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:28:09.504277 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:28:09.508613 [info ] [Thread-4 (]: 3 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:28:09.512033 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:28:09.514655 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:28:09.538974 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:28:09.544139 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:28:09.764238 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.fct_patient_summary"
+[0m20:28:09.773795 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.fct_patient_summary"
+[0m20:28:09.784525 [debug] [Thread-4 (]: On model.dbt_project.fct_patient_summary: create or replace transient table HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+    
+    
+    
+    
+    
+
+    as (WITH patient AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_patients
+),
+visit AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_visits
+)
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name AS full_name,
+    p.gender,
+    p.birth_date,
+    COUNT(v.visit_id) AS total_visits,
+    NVL(SUM(v.total_amount), 0) AS total_spent,
+    MAX(v.visit_date) AS latest_visit_date
+FROM RAW_PATIENTS p
+LEFT JOIN RAW_VISITS v on p.patient_id = v.patient_id
+GROUP BY 1,2,3,4
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.fct_patient_summary"} */;
+[0m20:28:09.787797 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:28:10.563680 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c5f85c-0002-495a-000e-3112000ae5ce
+[0m20:28:10.566942 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'RAW_PATIENTS' does not exist or not authorized.
+[0m20:28:10.620212 [debug] [Thread-4 (]: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'RAW_PATIENTS' does not exist or not authorized.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:28:10.624510 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5860939d-6838-4e70-91a4-913866d03a6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F51523CF0>]}
+[0m20:28:10.629742 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model STG.fct_patient_summary .................. [[31mERROR[0m in 1.11s]
+[0m20:28:10.639016 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:28:10.644807 [debug] [Thread-8 (]: Marking all children of 'model.dbt_project.fct_patient_summary' to be skipped because of status 'error'.  Reason: Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'RAW_PATIENTS' does not exist or not authorized.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql.
+[0m20:28:10.675199 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:28:10.678440 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:28:10.681616 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:28:10.818258 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:28:10.820920 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:28:10.982692 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:28:10.985253 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:28:11.157733 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:28:11.159575 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:28:11.316173 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was left open.
+[0m20:28:11.318018 [debug] [MainThread]: On model.dbt_project.fct_patient_summary: Close
+[0m20:28:11.500627 [info ] [MainThread]: 
+[0m20:28:11.504694 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.11 seconds (6.11s).
+[0m20:28:11.523628 [debug] [MainThread]: Command end result
+[0m20:28:11.689764 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:28:11.696820 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:28:11.703306 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:28:11.718484 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:28:11.719434 [info ] [MainThread]: 
+[0m20:28:11.720391 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:28:11.721136 [info ] [MainThread]: 
+[0m20:28:11.721993 [error] [MainThread]: [[31mERROR[0m]: in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+[0m20:28:11.722924 [error] [MainThread]:   Database Error in model fct_patient_summary (models\marts\fct_patient_summary.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'RAW_PATIENTS' does not exist or not authorized.
+  compiled code at target\run\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:28:11.723626 [info ] [MainThread]: 
+[0m20:28:11.724460 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\marts\fct_patient_summary.sql
+[0m20:28:11.725397 [info ] [MainThread]: 
+[0m20:28:11.727021 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:28:11.730116 [debug] [MainThread]: Command `dbt run` failed at 20:28:11.729843 after 12.38 seconds
+[0m20:28:11.730953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F5128C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4F5F9FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F4E04B3F0>]}
+[0m20:28:11.731921 [debug] [MainThread]: Flushing usage events
+[0m20:28:14.438370 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:28:57.327046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BEC3A92B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BEEB13D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BEEB139D0>]}
+
+
+============================== 20:28:57.340641 | 50bac5ff-52b5-4524-9b5d-207747cc7e2a ==============================
+[0m20:28:57.340641 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:28:57.343431 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:28:59.129618 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:28:59.131274 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:28:59.133101 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:29:00.331297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BECA75A70>]}
+[0m20:29:00.550414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF03AFF00>]}
+[0m20:29:00.554630 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:29:01.660812 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:29:02.148985 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:29:02.150810 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\fct_patient_summary.sql
+[0m20:29:03.764403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF1C74F50>]}
+[0m20:29:03.967365 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:29:03.972939 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:29:04.034373 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:29:04.058726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF190B110>]}
+[0m20:29:04.060157 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:29:04.061456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF1E54910>]}
+[0m20:29:04.065107 [info ] [MainThread]: 
+[0m20:29:04.066520 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:29:04.068913 [info ] [MainThread]: 
+[0m20:29:04.072252 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:29:04.088888 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS'
+[0m20:29:04.124064 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS"
+[0m20:29:04.124798 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS: show terse schemas in database HEALTHCARE_ANALYTICS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS"} */
+[0m20:29:04.125491 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:05.194039 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.068 seconds
+[0m20:29:05.207410 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:29:05.308917 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:29:05.311804 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:29:05.313532 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:06.201750 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.888 seconds
+[0m20:29:06.228768 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:29:06.230141 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:29:06.339887 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.104 seconds
+[0m20:29:06.356987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF1FE54A0>]}
+[0m20:29:06.376272 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:29:06.378458 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:29:06.382099 [info ] [Thread-2 (]: 1 of 3 START sql view model STG.stg_patients ................................... [RUN]
+[0m20:29:06.385985 [info ] [Thread-3 (]: 2 of 3 START sql view model STG.stg_visits ..................................... [RUN]
+[0m20:29:06.389202 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:29:06.391918 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:29:06.393864 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:29:06.400645 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:29:06.455406 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:29:06.466245 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:29:06.472777 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:29:06.518255 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:29:06.687825 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_visits"
+[0m20:29:06.685196 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_patients"
+[0m20:29:06.690886 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_project.stg_visits"
+[0m20:29:06.691905 [debug] [Thread-3 (]: On model.dbt_project.stg_visits: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_visits
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_VISITS
+)
+SELECT
+    visit_id,
+    patient_id,
+    try_cast(visit_date AS DATE) AS visit_date,
+    diagnosis_code,
+    total_amount,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_visits"} */;
+[0m20:29:06.693693 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_project.stg_patients"
+[0m20:29:06.694371 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:29:06.695257 [debug] [Thread-2 (]: On model.dbt_project.stg_patients: create or replace   view HEALTHCARE_ANALYTICS.STG.stg_patients
+  
+  
+  
+  
+  as (
+    WITH source AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.RAW.RAW_PATIENTS
+)
+SELECT
+    patient_id,
+    upper(first_name) as first_name,
+    upper(last_name) as last_name,
+    gender,
+    try_cast(dob AS DATE) as birth_date,
+    created_at
+FROM source
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_patients"} */;
+[0m20:29:06.696234 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:29:07.380431 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.686 seconds
+[0m20:29:07.441517 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.745 seconds
+[0m20:29:07.628239 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF1F6FE90>]}
+[0m20:29:07.631637 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF211F750>]}
+[0m20:29:07.635687 [info ] [Thread-2 (]: 1 of 3 OK created sql view model STG.stg_patients .............................. [[32mSUCCESS 1[0m in 1.23s]
+[0m20:29:07.641838 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:29:07.638547 [info ] [Thread-3 (]: 2 of 3 OK created sql view model STG.stg_visits ................................ [[32mSUCCESS 1[0m in 1.22s]
+[0m20:29:07.648326 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:29:07.653852 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:29:07.657613 [info ] [Thread-4 (]: 3 of 3 START sql table model STG.fct_patient_summary ........................... [RUN]
+[0m20:29:07.663430 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:29:07.676907 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:29:07.690617 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:29:07.696847 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:29:07.854170 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.fct_patient_summary"
+[0m20:29:07.862305 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_project.fct_patient_summary"
+[0m20:29:07.864676 [debug] [Thread-4 (]: On model.dbt_project.fct_patient_summary: create or replace transient table HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+    
+    
+    
+    
+    
+
+    as (WITH patient AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_patients
+),
+visit AS (
+    SELECT * FROM HEALTHCARE_ANALYTICS.STG.stg_visits
+)
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name AS full_name,
+    p.gender,
+    p.birth_date,
+    COUNT(v.visit_id) AS total_visits,
+    NVL(SUM(v.total_amount), 0) AS total_spent,
+    MAX(v.visit_date) AS latest_visit_date
+FROM patient p
+LEFT JOIN visit v on p.patient_id = v.patient_id
+GROUP BY 1,2,3,4
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.fct_patient_summary"} */;
+[0m20:29:07.866795 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:29:09.738203 [debug] [Thread-4 (]: SQL status: SUCCESS 3 in 1.871 seconds
+[0m20:29:09.758732 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50bac5ff-52b5-4524-9b5d-207747cc7e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF21E3750>]}
+[0m20:29:09.768716 [info ] [Thread-4 (]: 3 of 3 OK created sql table model STG.fct_patient_summary ...................... [[32mSUCCESS 3[0m in 2.10s]
+[0m20:29:09.776549 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:29:09.784539 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:29:09.786482 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS' was left open.
+[0m20:29:09.791261 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS: Close
+[0m20:29:09.940040 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:29:09.942142 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:29:10.324046 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was left open.
+[0m20:29:10.327102 [debug] [MainThread]: On model.dbt_project.stg_patients: Close
+[0m20:29:10.463461 [debug] [MainThread]: Connection 'model.dbt_project.stg_visits' was left open.
+[0m20:29:10.465792 [debug] [MainThread]: On model.dbt_project.stg_visits: Close
+[0m20:29:10.965596 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was left open.
+[0m20:29:10.966702 [debug] [MainThread]: On model.dbt_project.fct_patient_summary: Close
+[0m20:29:11.150508 [info ] [MainThread]: 
+[0m20:29:11.169234 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 7.08 seconds (7.08s).
+[0m20:29:11.203970 [debug] [MainThread]: Command end result
+[0m20:29:11.394382 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:29:11.401850 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:29:11.409254 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:29:11.422908 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:29:11.423536 [info ] [MainThread]: 
+[0m20:29:11.424735 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:29:11.425513 [info ] [MainThread]: 
+[0m20:29:11.426273 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m20:29:11.428144 [debug] [MainThread]: Command `dbt run` succeeded at 20:29:11.427920 after 14.49 seconds
+[0m20:29:11.429493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BF1DCC850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BECA25950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BEEB4B3F0>]}
+[0m20:29:11.430694 [debug] [MainThread]: Flushing usage events
+[0m20:29:13.934061 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:31:13.725672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAC6A792B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAC91E3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAC91E39D0>]}
+
+
+============================== 20:31:13.736575 | 5acfe04f-dff0-4d3d-9930-a1cb920bf4ea ==============================
+[0m20:31:13.736575 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:31:13.737835 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:31:15.211372 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:31:15.212318 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:31:15.213141 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:31:16.130787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAC7145A70>]}
+[0m20:31:16.278728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACAA7FF00>]}
+[0m20:31:16.281570 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:31:17.598670 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:31:18.278453 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:31:18.279404 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:31:18.280182 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:31:18.311881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACAF0FD50>]}
+[0m20:31:18.874750 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:31:18.890571 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:31:18.992908 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:31:19.111617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACC1EF5C0>]}
+[0m20:31:19.114723 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:31:19.117865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACC221470>]}
+[0m20:31:19.124442 [info ] [MainThread]: 
+[0m20:31:19.126451 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:31:19.129109 [info ] [MainThread]: 
+[0m20:31:19.133106 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:31:19.177040 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:31:19.278245 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:31:19.279993 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:31:19.281189 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:20.917448 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.636 seconds
+[0m20:31:20.942946 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:31:20.944890 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:31:21.058704 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.112 seconds
+[0m20:31:21.073082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5acfe04f-dff0-4d3d-9930-a1cb920bf4ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACC27E750>]}
+[0m20:31:21.089930 [debug] [Thread-2 (]: Began running node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:31:21.092190 [debug] [Thread-3 (]: Began running node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:31:21.096262 [info ] [Thread-2 (]: 1 of 2 START test not_null_fct_patient_summary_patient_id ...................... [RUN]
+[0m20:31:21.101379 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111'
+[0m20:31:21.098883 [info ] [Thread-3 (]: 2 of 2 START test unique_fct_patient_summary_patient_id ........................ [RUN]
+[0m20:31:21.103692 [debug] [Thread-2 (]: Began compiling node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:31:21.106027 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265'
+[0m20:31:21.136329 [debug] [Thread-3 (]: Began compiling node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:31:21.267874 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265"
+[0m20:31:21.277219 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111"
+[0m20:31:21.280299 [debug] [Thread-3 (]: Began executing node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:31:21.281232 [debug] [Thread-2 (]: Began executing node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:31:21.332669 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111"
+[0m20:31:21.334200 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265"
+[0m20:31:21.338061 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265"
+[0m20:31:21.339522 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111"
+[0m20:31:21.340196 [debug] [Thread-3 (]: On test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    patient_id as unique_field,
+    count(*) as n_records
+
+from HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+where patient_id is not null
+group by patient_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265"} */
+[0m20:31:21.341055 [debug] [Thread-2 (]: On test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select patient_id
+from HEALTHCARE_ANALYTICS.STG.fct_patient_summary
+where patient_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111"} */
+[0m20:31:21.341896 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:31:21.342609 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:31:22.753608 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.411 seconds
+[0m20:31:22.810598 [info ] [Thread-2 (]: 1 of 2 PASS not_null_fct_patient_summary_patient_id ............................ [[32mPASS[0m in 1.71s]
+[0m20:31:22.814857 [debug] [Thread-2 (]: Finished running node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:31:23.164223 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.821 seconds
+[0m20:31:23.173892 [info ] [Thread-3 (]: 2 of 2 PASS unique_fct_patient_summary_patient_id .............................. [[32mPASS[0m in 2.07s]
+[0m20:31:23.178125 [debug] [Thread-3 (]: Finished running node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:31:23.186102 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:31:23.188244 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:31:23.189728 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:31:23.370851 [debug] [MainThread]: Connection 'test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111' was left open.
+[0m20:31:23.373504 [debug] [MainThread]: On test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111: Close
+[0m20:31:23.606543 [debug] [MainThread]: Connection 'test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265' was left open.
+[0m20:31:23.611205 [debug] [MainThread]: On test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265: Close
+[0m20:31:23.783491 [info ] [MainThread]: 
+[0m20:31:23.787599 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 4.65 seconds (4.65s).
+[0m20:31:23.793697 [debug] [MainThread]: Command end result
+[0m20:31:24.089503 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:31:24.098810 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:31:24.109622 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:31:24.130923 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:31:24.132062 [info ] [MainThread]: 
+[0m20:31:24.133437 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:31:24.134673 [info ] [MainThread]: 
+[0m20:31:24.136003 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m20:31:24.139769 [debug] [MainThread]: Command `dbt test` succeeded at 20:31:24.138483 after 10.80 seconds
+[0m20:31:24.141139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAC9015A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACC502FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACC503280>]}
+[0m20:31:24.142264 [debug] [MainThread]: Flushing usage events
+[0m20:31:26.644054 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:34:37.638452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFBD092B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF8B65450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFE47FB10>]}
+
+
+============================== 20:34:37.658073 | 84fc3daf-759d-4567-b4a4-2a5bd58f2a5f ==============================
+[0m20:34:37.658073 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:34:37.667767 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt docs generate', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:34:39.581609 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:34:39.583312 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:34:39.584571 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:34:40.627383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFC3E5A70>]}
+[0m20:34:40.748685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFFDEBF00>]}
+[0m20:34:40.751284 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m20:34:41.523645 [debug] [MainThread]: checksum: 17b8c0eed372bdc76158915a5b86153b95ebcdfebef695d6713d3c569800f71e, vars: {}, profile: dbt_project, target: dev, version: 1.12.0
+[0m20:34:41.847462 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:34:41.848140 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:34:41.848545 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:34:41.864952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE8020FD50>]}
+[0m20:34:42.070889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE812FC140>]}
+[0m20:34:42.072555 [info ] [MainThread]: Found 3 models, 2 data tests, 2 sources, 545 macros
+[0m20:34:42.074043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFFCAD010>]}
+[0m20:34:42.081757 [info ] [MainThread]: 
+[0m20:34:42.085410 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:34:42.088196 [info ] [MainThread]: 
+[0m20:34:42.092996 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:34:42.122876 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTHCARE_ANALYTICS_STG'
+[0m20:34:42.244640 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:34:42.245654 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show objects in HEALTHCARE_ANALYTICS.STG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */;
+[0m20:34:42.246653 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:34:43.411842 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.165 seconds
+[0m20:34:43.430065 [debug] [ThreadPool]: Using snowflake connection "list_HEALTHCARE_ANALYTICS_STG"
+[0m20:34:43.431237 [debug] [ThreadPool]: On list_HEALTHCARE_ANALYTICS_STG: show user functions in HEALTHCARE_ANALYTICS.STG
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_HEALTHCARE_ANALYTICS_STG"} */
+[0m20:34:43.510791 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.078 seconds
+[0m20:34:43.519024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84fc3daf-759d-4567-b4a4-2a5bd58f2a5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE8026C460>]}
+[0m20:34:43.532577 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_visits
+[0m20:34:43.534234 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_patients
+[0m20:34:43.536722 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_project.stg_visits'
+[0m20:34:43.538582 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dbt_project.stg_patients'
+[0m20:34:43.539887 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_visits
+[0m20:34:43.541390 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_patients
+[0m20:34:43.552992 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_visits"
+[0m20:34:43.557274 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_patients"
+[0m20:34:43.559339 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_visits
+[0m20:34:43.561191 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_visits
+[0m20:34:43.562374 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_patients
+[0m20:34:43.564571 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_patients
+[0m20:34:43.565618 [debug] [Thread-4 (]: Began running node model.dbt_project.fct_patient_summary
+[0m20:34:43.566751 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_project.fct_patient_summary'
+[0m20:34:43.567512 [debug] [Thread-4 (]: Began compiling node model.dbt_project.fct_patient_summary
+[0m20:34:43.570611 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.fct_patient_summary"
+[0m20:34:43.572445 [debug] [Thread-4 (]: Began executing node model.dbt_project.fct_patient_summary
+[0m20:34:43.573821 [debug] [Thread-4 (]: Finished running node model.dbt_project.fct_patient_summary
+[0m20:34:43.574781 [debug] [Thread-5 (]: Began running node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:34:43.575407 [debug] [Thread-3 (]: Began running node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:34:43.576154 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111'
+[0m20:34:43.576859 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_visits, now test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265)
+[0m20:34:43.577544 [debug] [Thread-5 (]: Began compiling node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:34:43.578134 [debug] [Thread-3 (]: Began compiling node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:34:43.600938 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111"
+[0m20:34:43.616982 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265"
+[0m20:34:43.619441 [debug] [Thread-5 (]: Began executing node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:34:43.620742 [debug] [Thread-5 (]: Finished running node test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111
+[0m20:34:43.621705 [debug] [Thread-3 (]: Began executing node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:34:43.623166 [debug] [Thread-3 (]: Finished running node test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265
+[0m20:34:43.624711 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:34:43.625213 [debug] [MainThread]: Connection 'list_HEALTHCARE_ANALYTICS_STG' was left open.
+[0m20:34:43.625650 [debug] [MainThread]: On list_HEALTHCARE_ANALYTICS_STG: Close
+[0m20:34:43.746773 [debug] [MainThread]: Connection 'test.dbt_project.unique_fct_patient_summary_patient_id.9145ccb265' was properly closed.
+[0m20:34:43.747329 [debug] [MainThread]: Connection 'model.dbt_project.stg_patients' was properly closed.
+[0m20:34:43.748030 [debug] [MainThread]: Connection 'model.dbt_project.fct_patient_summary' was properly closed.
+[0m20:34:43.748440 [debug] [MainThread]: Connection 'test.dbt_project.not_null_fct_patient_summary_patient_id.b5b0672111' was properly closed.
+[0m20:34:43.750492 [debug] [MainThread]: Command end result
+[0m20:34:44.095030 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:34:44.110692 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:34:44.229118 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:34:44.257174 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\run_results.json
+[0m20:34:46.342114 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m20:34:46.343693 [info ] [MainThread]: Building catalog
+[0m20:34:46.425198 [debug] [ThreadPool]: Acquiring new snowflake connection 'HEALTHCARE_ANALYTICS.information_schema'
+[0m20:34:46.538284 [debug] [ThreadPool]: Using snowflake connection "HEALTHCARE_ANALYTICS.information_schema"
+[0m20:34:46.543379 [debug] [ThreadPool]: On HEALTHCARE_ANALYTICS.information_schema: with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from HEALTHCARE_ANALYTICS.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'RAW_VISITS' and upper("table_name") = upper('RAW_VISITS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'RAW_PATIENTS' and upper("table_name") = upper('RAW_PATIENTS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'fct_patient_summary' and upper("table_name") = upper('fct_patient_summary')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'stg_visits' and upper("table_name") = upper('stg_visits')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'stg_patients' and upper("table_name") = upper('stg_patients')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from HEALTHCARE_ANALYTICS.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'RAW_VISITS' and upper("table_name") = upper('RAW_VISITS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'RAW_PATIENTS' and upper("table_name") = upper('RAW_PATIENTS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'fct_patient_summary' and upper("table_name") = upper('fct_patient_summary')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'stg_visits' and upper("table_name") = upper('stg_visits')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STG' and upper("table_schema") = upper('STG')
+
+                    and 
+    "table_name" ilike 'stg_patients' and upper("table_name") = upper('stg_patients')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "HEALTHCARE_ANALYTICS.information_schema"} */
+[0m20:34:46.548916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:34:51.046494 [debug] [ThreadPool]: SQL status: SUCCESS 31 in 4.498 seconds
+[0m20:34:51.216973 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\catalog.json
+[0m20:34:51.384299 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\manifest.json
+[0m20:34:51.398542 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\semantic_manifest.json
+[0m20:34:51.416502 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\osi_document.json
+[0m20:34:51.419319 [info ] [MainThread]: Catalog written to C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\dbt_project\target\catalog.json
+[0m20:34:51.428779 [debug] [MainThread]: Command `dbt docs generate` succeeded at 20:34:51.428082 after 14.23 seconds
+[0m20:34:51.431323 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m20:34:51.436317 [debug] [MainThread]: Connection 'HEALTHCARE_ANALYTICS.information_schema' was left open.
+[0m20:34:51.442183 [debug] [MainThread]: On HEALTHCARE_ANALYTICS.information_schema: Close
+[0m20:34:51.585988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEFE2B5A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE81785020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE81784C00>]}
+[0m20:34:51.587568 [debug] [MainThread]: Flushing usage events
+[0m20:34:54.197068 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:36:19.904043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230FC692B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022312373ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022312373890>]}
+
+
+============================== 20:36:19.910739 | 53daddc4-0d4a-4dbe-be08-1fcd5c0d5e3c ==============================
+[0m20:36:19.910739 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:36:19.911967 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'invocation_command': 'dbt docs serve', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Nagavarmas\\SNOWFLAKE\\Projects\\snowflake-dbt-pipeline\\dbt_project\\logs'}
+[0m20:36:21.343008 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:36:21.344082 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:36:21.344832 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:36:22.095422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '53daddc4-0d4a-4dbe-be08-1fcd5c0d5e3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022310335A70>]}
+[0m20:36:22.293615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '53daddc4-0d4a-4dbe-be08-1fcd5c0d5e3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230E17B240>]}
+[0m20:38:28.023799 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m20:38:29.408046 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 379, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\cli\main.py", line 322, in docs_serve
+    results = task.run()
+  File "C:\Nagavarmas\SNOWFLAKE\Projects\snowflake-dbt-pipeline\venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 314, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 305, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m20:38:29.422703 [debug] [MainThread]: Command `dbt docs serve` failed at 20:38:29.422028 after 129.76 seconds
+[0m20:38:29.425547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022313F68D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022313F68E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022313F81E50>]}
+[0m20:38:29.428356 [debug] [MainThread]: Flushing usage events
+[0m20:38:31.812105 [debug] [MainThread]: An error was encountered while trying to flush usage events
