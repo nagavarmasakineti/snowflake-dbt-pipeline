@@ -2,6 +2,7 @@
 target/
 dbt_packages/
 logs/
+*.logs
 
 # Sensitive credentials
 profiles.yml
