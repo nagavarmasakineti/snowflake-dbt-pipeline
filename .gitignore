@@ -3,6 +3,7 @@ target/
 dbt_packages/
 logs/
 *.logs
+*.log
 
 # Sensitive credentials
 profiles.yml
@@ -14,3 +15,25 @@ Thumbs.dbt
 # Virtual environment (if inside project)
 venv/
 .venv/
+env/
+ENV/
+
+# Airflow and Python Caches / Logs
+__pycache__/
+*.pyc
+plugins/
+
+# dbt Artifacts & Credentials
+dags/dbt_project/target/
+dags/dbt_project/dbt_packages
+dags/dbt_project/logs/
+dags/dbt_project/.user.yml
+
+# IMPORTANT : Keep Sensitive Credentials out of GIT
+.env
+profiles.yml
+dags/dbt_project/profiles.yml
+
+# Loal Data Drop
+data_drop/*.csv
+
