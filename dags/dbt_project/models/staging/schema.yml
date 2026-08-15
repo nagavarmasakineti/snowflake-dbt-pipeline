@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: raw_data
+  - name: staging_data
     database: HEALTHCARE_ANALYTICS
     schema: RAW
     tables:

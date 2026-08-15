@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: HEALTHCARE_ANALYTICS
+    schema: RAW
+    description: "Landing RAW Data to these tables once data available in External Stage"
+    tables:
+      - name: RAW_PATIENTS
+        description: "Patients Raw Data"
+      - name: RAW_VISITS
+        description: "Visits Raw Data"
