@@ -38,10 +38,7 @@ def check_snowflake_stream():
 
         if stream_has_data:
             print(f"New Files Detected!, Resetting Stream Trigger...")
-            #1. Reset Stream Offset
-            cur.execute(F"CREATE OR REPLACE STREAM {STREAM_NAME} ON STAGE MY_RAW_STAGE;")
-
-            #2. Ingest the data into the raw tables
+            #1. Ingest the data into the raw tables
             print("Bronze Layer :: Loading the data into raw table....")
             cur.execute("""
             COPY INTO healthcare_analytics.raw.raw_patients (
@@ -51,6 +48,9 @@ def check_snowflake_stream():
             cur.execute("""COPY INTO healthcare_analytics.raw.raw_visit (visit_id, patient_id, visit_date, diagnosis_code, total_amount)
             FROM (SELECT $1, $2, $3, $4, $5 FROM @MY_RAW_STAGE/visits) 
             FILE_FORMAT = (TYPE = 'CSV', SKIP_HEADER=1);""")
+
+            #2. Reset Stream Offset
+            cur.execute(F"CREATE OR REPLACE STREAM {STREAM_NAME} ON STAGE MY_RAW_STAGE;")
             
 
             #3. Check Airflow Health

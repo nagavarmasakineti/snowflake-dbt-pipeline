@@ -44,7 +44,7 @@ with DAG (
         bash_command = 'cd /opt/airflow/dags/dbt_project && dbt build --select staging --profiles-dir .'
     )
 
-    # 4: Gold Layer: Build and Test Staging Models
+    # 4: Gold Layer: Build and Test Marts Models
     run_marts = BashOperator(
             task_id = 'run_marts_models',
             bash_command = 'cd /opt/airflow/dags/dbt_project && dbt build --select marts --profiles-dir .'
