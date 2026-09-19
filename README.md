@@ -28,16 +28,31 @@ This project demonstrates an automated Medallion Architecture data pipeline that
 ## 📂 Project Structure
 
 ```text
-├── data_drop/                    # Landing folder for raw incoming CSVs
-├── data_processing_failed/       # Quarantine folder for invalid files
-├── dags/
-│   ├── 02_snowflake_dbt_pipeline.py # Airflow DAG orchestration definition
-│   └── dbt_project/              # dbt project directory
+├── config/
+├── dags/                             # Airflow DAGs folder
+│   ├── dbt_snowflake_pipeline.py     # Primary Airflow DAG orchestration script
+│   ├── hello_world_dag.py            # Test DAG
+│   └── dbt_project/                  # dbt Project root
+│       ├── macros/
 │       ├── models/
-│       │   ├── staging/          # Silver layer dbt models
-│       │   └── marts/            # Gold layer dbt models
-│       └── profiles.yml          # dbt connection profiles
-├── validate_stage_files.py       # Python file ingestion & validation engine
-├── check_snowflake_stream.py     # Stream monitoring & Airflow trigger service
-├── snowflake_setup.sql           # DDL/DML for Warehouses, RBAC, Tables, & Stages
-└── README.md
+│       │   ├── raw/
+│       │   ├── staging/              # Silver layer dbt models
+│       │   └── marts/                # Gold layer dbt models
+│       ├── dbt_project.yml           # dbt project configuration
+│       └── profiles.yml              # dbt connection target profile
+├── data_drop/                        # Landing folder for incoming raw CSVs
+├── data_processing_failed/           # Quarantine folder for malformed files
+├── scripts/                          # Ingestion & orchestration utilities
+│   ├── 01_ingest_local_data_to_snowflake.py
+│   ├── airflow_api_clientV1.py
+│   ├── airflow_health_check.py
+│   ├── snowflake_config.py
+│   └── snowflake_pipeline_runner.py
+├── sql/                              # SQL scripts & setup DDLs
+├── .env                              # Environment configuration
+├── .gitignore
+├── docker-compose.yaml               # Airflow local setup definition
+├── Dockerfile
+├── README.md
+└── requirements.txt                  # Dependencies list
+```
