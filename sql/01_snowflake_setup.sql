@@ -48,34 +48,21 @@ USE WAREHOUSE TRANSFORM_WH;
 USE DATABASE HEALTHCARE_ANALYTICS;
 USE SCHEMA RAW;
 
--- Create raw patients source table
-CREATE OR REPLACE TABLE RAW_PATIENTS (
-    patient_id STRING,
-    first_name STRING,
-    last_name STRING,
-    gender STRING,
-    dob STRING,
-    created_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
-);
+-- =====================================================================
+-- STEP 4:STAGE Creation in RAW Schema
+-- =====================================================================
+USE DATABASE HEALTHCARE_ANALYTICS;
+USE SCHEMA RAW;
 
--- Create raw visits source table
-CREATE OR REPLACE TABLE RAW_VISITS (
-    visit_id STRING,
-    patient_id STRING,
-    visit_date STRING,
-    diagnosis_code STRING,
-    total_amount NUMBER(10,2),
-    created_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
-);
+CREATE STAGE IF NOT EXISTS MY_RAW_STAGE;
 
--- Insert sample raw records
-INSERT INTO RAW_PATIENTS (patient_id, first_name, last_name, gender, dob) VALUES
-('P101', 'john', 'doe', 'M', '1985-06-12'),
-('P102', 'jane', 'smith', 'F', '1992-01-25'),
-('P103', 'robert', 'johnson', 'M', '1978-11-03');
+SHOW STAGES IN SCHEMA HEALTHCARE_ANALYTICS.RAW;
 
-INSERT INTO RAW_VISITS (visit_id, patient_id, visit_date, diagnosis_code, total_amount) VALUES
-('V1001', 'P101', '2026-07-01', 'A01.0', 250.00),
-('V1002', 'P102', '2026-07-02', 'B20.0', 1100.50),
-('V1003', 'P101', '2026-07-05', 'C34.9', 450.75),
-('V1004', 'P103', '2026-07-10', 'E11.9', 300.00);
+--Enable Directory for this stage and refresh
+ALTER STAGE MY_RAW_STAGE SET DIRECTORY = (enable = TRUE);
+ALTER STAGE MY_RAW_STAGE REFRESH;
+
+--Create STREAM on the stage directory
+CREATE OR REPLACE STREAM RAW_STAGE_FILE_STREAM ON STAGE MY_RAW_STAGE;
+SHOW STREAMS IN SCHEMA HEALTHCARE_ANALYTICS.RAW;
+SELECT * FROM RAW_STAGE_FILE_STREAM;

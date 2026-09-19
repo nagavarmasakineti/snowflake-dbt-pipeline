@@ -8,5 +8,5 @@ sources:
     tables:
       - name: RAW_PATIENTS
         description: "Patients Raw Data"
-      - name: RAW_VISITS
+      - name: RAW_VISIT
         description: "Visits Raw Data"

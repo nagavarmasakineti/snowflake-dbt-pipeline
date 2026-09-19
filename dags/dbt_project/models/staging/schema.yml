@@ -3,7 +3,16 @@ version: 2
 sources:
   - name: staging_data
     database: HEALTHCARE_ANALYTICS
-    schema: RAW
+    schema: STG
     tables:
-      - name: RAW_PATIENTS
-      - name: RAW_VISITS
+      - name: STG_PATIENT
+
+models:
+  - name: stg_patient
+    description: "Staged Patient Records"
+    columns:
+      - name: gender
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['MALE', 'FEMALE', 'OTHER']

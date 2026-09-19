@@ -1,0 +1,53 @@
+# RUN PIPELINE STEPS
+## Prerequisites
+1. Setup your snowflake connection details in your env file and make sure the respective role, datawarehouse, database and schema are configured
+```bash
+SNOWFLAKE_ACCOUNT = your_account
+SNOWFLAKE_USERNAME = your_username
+SNOWFLAKE_PASSWORD = your_password
+SNOWFLAKE_ROLE = TRANSFORM_ROLE
+SNOWFLAKE_WAREHOUSE = TRANSFORM_WH
+SNOWFLAKE_DATABASE = HEALTHCARE_ANALYTICS
+SNOWFLAKE_RAW_SCHEMA = RAW
+
+#STEPS to setup SNOWFLAKE
+RUN scripts in SQL-01_snowflake_setup
+```
+
+### Turn on Docker and make sure it is up and running
+```bash
+# Run the following commands for bringing up APACHE AIRFLOW
+# Start Server all containers
+docker-compose up -d
+
+# To check all containers health:
+docker-compose ps
+
+# Stop Server
+docker-compose down
+
+# Start Specific Container
+docker-compose up -d snowflake-dbt-pipeline-airflow-worker-1
+
+# Restart particular servers
+docker-compose restart airflow-apiserver
+
+# Available Containers List
+snowflake-dbt-pipeline-airflow-apiserver-1
+snowflake-dbt-pipeline-airflow-triggerer-1
+snowflake-dbt-pipeline-airflow-dag-processor-1
+snowflake-dbt-pipeline-airflow-scheduler-1
+snowflake-dbt-pipeline-redis-1
+snowflake-dbt-pipeline-postgres-1
+
+# For checking logs
+docker logs snowflake-dbt-pipeline-airflow-worker-1 --tail 100 -f
+docker logs snowflake-dbt-pipeline-airflow-apiserver-1 --tail 100 -f
+docker logs snowflake-dbt-pipeline-airflow-init-1
+docker logs snowflake-dbt-pipeline-airflow-dag-processor-1 --tail 50
+```
+## Command to create Admin user for accessing airflow
+```bash
+ docker-compose  exec airflow-apiserver airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin
+```
+

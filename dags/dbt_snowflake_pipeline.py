@@ -33,18 +33,24 @@ with DAG (
     )
 
     # 2: Test dbt connection to snowflake
-    Test_DBT_Snowflake_Connection = BashOperator(
+    test_dbt_snowflake_connection = BashOperator(
         task_id = 'Test_DBT_Snowflake_Connection',
         bash_command = 'cd /opt/airflow/dags/dbt_project && dbt debug --profiles-dir . && echo "Step 2: Connection between dbt and snowflake is successfull"'
     )
 
-    # 3: Run the DBT Models
-    run_dbt_models = BashOperator(
-        task_id = 'run_dbt_models',
-        bash_command = 'cd /opt/airflow/dags/dbt_project && dbt build'
+    # 3: Silver layer: Build and Test Staging Models
+    run_staging = BashOperator(
+        task_id = 'run_staging_models',
+        bash_command = 'cd /opt/airflow/dags/dbt_project && dbt build --select staging --profiles-dir .'
     )
 
+    # 4: Gold Layer: Build and Test Staging Models
+    run_marts = BashOperator(
+            task_id = 'run_marts_models',
+            bash_command = 'cd /opt/airflow/dags/dbt_project && dbt build --select marts --profiles-dir .'
+        )
+
     # Task Dependencies: Step Order
-    start_pipeline >> Test_DBT_Snowflake_Connection >> run_dbt_models
+    start_pipeline >> test_dbt_snowflake_connection >> run_staging >> run_marts
 
 

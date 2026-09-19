@@ -32,24 +32,41 @@ def check_snowflake_stream():
         cur.execute(f"ALTER STAGE MY_RAW_STAGE REFRESH;")
 
         # Check if Stream has Data
-        stream_has_data = cur.execute(f"SELECT SYSTEM$STREAM_HAS_DATA('{STREAM_NAME}');")
+        row = cur.execute(f"SELECT SYSTEM$STREAM_HAS_DATA('{STREAM_NAME}');").fetchone()
+        stream_has_data = row[0] if row else False
+        print(f"The value of stream_has_data :: {stream_has_data}")
 
         if stream_has_data:
-            print(f"Stram has uncommitted files.")
-            #1. Check Airflow Health
+            print(f"New Files Detected!, Resetting Stream Trigger...")
+            #1. Reset Stream Offset
+            cur.execute(F"CREATE OR REPLACE STREAM {STREAM_NAME} ON STAGE MY_RAW_STAGE;")
+
+            #2. Ingest the data into the raw tables
+            print("Bronze Layer :: Loading the data into raw table....")
+            cur.execute("""
+            COPY INTO healthcare_analytics.raw.raw_patients (
+                patient_id, first_name, last_name, gender, dob, created_at)
+                FROM (SELECT $1, $2, $3, $4, $5, CURRENT_TIMESTAMP() FROM @MY_RAW_STAGE/patients) 
+                FILE_FORMAT = (TYPE = 'CSV', SKIP_HEADER=1);""")
+            cur.execute("""COPY INTO healthcare_analytics.raw.raw_visit (visit_id, patient_id, visit_date, diagnosis_code, total_amount)
+            FROM (SELECT $1, $2, $3, $4, $5 FROM @MY_RAW_STAGE/visits) 
+            FILE_FORMAT = (TYPE = 'CSV', SKIP_HEADER=1);""")
+            
+
+            #3. Check Airflow Health
             if not check_dags_health():
                 print(f"Airflow health check failed, Aborting Pipeline Trigger...")
                 return jsonify({"status": "Failed", "reason":"Airflow is not healthy"}), 503
             print(f"********************** Health Check Completed ****************************")
             
-            #2. Retrieve Token
+            #3. Retrieve Token
             token = get_access_token()
             if not token:
                 print(f"Autahntication of Airflow Failed, Aborting Pipeline...")
                 return jsonify({"status":"Failed", "reason": "Airflow Authantication Failed"}), 401
             print(f"********************** JWS Token Received ****************************")
             
-            # 3. Unsuspend DAG and Trigger
+            # 4. Unsuspend DAG and Trigger
             target_dag_id = "02_snowflake_dbt_pipeline"
             print(f" --> [SUCCESS]: Fetch Token Successfull. Unsuspending DAG...")
             if unpause_dag(target_dag_id, token, host_name):
