@@ -114,6 +114,7 @@ def validate_stage_files():
                                 AUTO_COMPRESS = TRUE
                                 OVERWRITE = TRUE;
                             """)
+                cur.execute("ALTER STAGE MY_RAW_STAGE REFRESH;")
                 print(f"2. Successfully Staged {file_name}")
 
                 # Remove the staged file from the directory

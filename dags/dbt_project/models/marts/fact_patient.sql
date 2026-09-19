@@ -8,7 +8,7 @@ SELECT
     dob,
     DATEDIFF('year', dob, current_date()) as age,
     CASE
-    WHEN DATEDIFF('year', dob, current_date()) < 18 THEN 'Peidatric(0-17)'
+    WHEN DATEDIFF('year', dob, current_date()) < 18 THEN 'Pediatric(0-17)'
     WHEN DATEDIFF('year', dob, current_date()) BETWEEN 18 AND 64 THEN 'Adult(18-64)'
     ELSE 'Senior (65+)'
     END as age_group,
