@@ -5,16 +5,14 @@ flowchart TD
     subgraph Phase1 ["1. Local File Ingestion & Validation"]
         A["data_drop/ (Raw CSVs)"] --> B{"01_ingest_local_data_to_snowflake.py"}
         B -->|Validation Failed| C["data_processing_failed/ (Quarantine)"]
-        B -->|Validation Passed| D["PUT file://... @MY_RAW_STAGE/{subfolder}/"]
+        B -->|Validation Passed| D["PUT file://... @MY_RAW_STAGE/patients/"]
         D --> E["ALTER STAGE MY_RAW_STAGE REFRESH"]
     end
 
     subgraph Phase2 ["2. Stream Detection & Bronze Ingestion"]
         F{"snowflake_pipeline_runner.py"} --> G{"SYSTEM$STREAM_HAS_DATA"}
         G -->|Stream Has Data| H["COPY INTO raw.raw_patients"]
-        G -->|Stream Has Data| I["COPY INTO raw.raw_visit"]
         H --> J["RESET STREAM: RAW_STAGE_FILE_STREAM"]
-        I --> J
         J --> K{"airflow_health_check.py"}
         K -->|Healthy| L["airflow_api_clientV1.py"]
     end
@@ -27,7 +25,7 @@ flowchart TD
         Q --> R["Task 4: run_marts_models (Gold)"]
     end
 
-    %% Cross-subgraph linkage without inline text on boundary link
+    %% Cross-subgraph linkage
     L --> M
 ```
 ## 🏗️ Architecture Overview
