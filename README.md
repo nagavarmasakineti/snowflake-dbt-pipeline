@@ -1,7 +1,37 @@
 # End-to-End Automated Data Ingestion & Transformation Pipeline (Snowflake + Airflow + dbt)
 
-This project demonstrates an automated Medallion Architecture data pipeline that ingests raw healthcare CSV datasets, validates schema integrity, stages data to Snowflake, checks for state changes via Snowflake Directory Streams, and triggers an Airflow DAG to perform dbt modeling and testing.
+This project demonstrates an automated Medallion Architecture data pipeline that ingests raw healthcare CSV datasets (`patients` and `visits`), validates schema integrity, stages data to Snowflake Internal Stages, detects changes via Snowflake Directory Streams, and triggers an Airflow DAG to execute dbt transformations (Silver & Gold layers).
 
+---
+
+## 🏗️ Architecture & Data Flow
+
+```mermaid
+flowchart TD
+    subgraph Phase1 ["1. Local File Ingestion & Validation"]
+        A["data_drop/ (Raw CSVs)"] --> B{"01_ingest_local_data_to_snowflake.py"}
+        B -->|Validation Failed| C["data_processing_failed/ (Quarantine)"]
+        B -->|Validation Passed| D["PUT file://... @MY_RAW_STAGE/{subfolder}/"]
+        D --> E["ALTER STAGE MY_RAW_STAGE REFRESH"]
+    end
+
+    subgraph Phase2 ["2. Stream Detection & Bronze Ingestion"]
+        F{"snowflake_pipeline_runner.py"} -->|Check SYSTEM$STREAM_HAS_DATA| G["RAW_STAGE_FILE_STREAM"]
+        G -->|Stream Has Data| H["COPY INTO raw.raw_patients"]
+        G -->|Stream Has Data| I["COPY INTO raw.raw_visit"]
+        H & I --> J["CREATE OR REPLACE STREAM RAW_STAGE_FILE_STREAM"]
+        J --> K{"airflow_health_check.py"}
+        K -->|Healthy| L["airflow_api_clientV1.py (Get Auth Token)"]
+        L --> M["Airflow REST API: Unpause & Trigger DAG"]
+    end
+
+    subgraph Phase3 ["3. Orchestration & dbt Transformations"]
+        M --> N["DAG: 02_snowflake_dbt_pipeline"]
+        N --> O["Task 1: start_pipeline (PythonOperator)"]
+        O --> P["Task 2: Test_DBT_Snowflake_Connection (dbt debug)"]
+        P --> Q["Task 3: run_staging_models (dbt build --select staging)"]
+        Q --> R["Task 4: run_marts_models (dbt build --select marts)"]
+    end
 ---
 
 ## 🏗️ Architecture Overview
