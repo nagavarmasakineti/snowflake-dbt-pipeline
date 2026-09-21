@@ -1,9 +1,3 @@
-# End-to-End Automated Data Ingestion & Transformation Pipeline (Snowflake + Airflow + dbt)
-
-This project demonstrates an automated Medallion Architecture data pipeline that ingests raw healthcare CSV datasets (`patients` and `visits`), validates schema integrity, stages data to Snowflake Internal Stages, detects changes via Snowflake Directory Streams, and triggers an Airflow DAG to execute dbt transformations (Silver & Gold layers).
-
----
-
 ## 🏗️ Architecture & Data Flow
 
 ```mermaid
@@ -16,23 +10,25 @@ flowchart TD
     end
 
     subgraph Phase2 ["2. Stream Detection & Bronze Ingestion"]
-        F{"snowflake_pipeline_runner.py"} -->|Check SYSTEM$STREAM_HAS_DATA| G["RAW_STAGE_FILE_STREAM"]
+        F{"snowflake_pipeline_runner.py"} --> G{"SYSTEM$STREAM_HAS_DATA"}
         G -->|Stream Has Data| H["COPY INTO raw.raw_patients"]
         G -->|Stream Has Data| I["COPY INTO raw.raw_visit"]
-        H --> J["CREATE OR REPLACE STREAM RAW_STAGE_FILE_STREAM"]
+        H --> J["RESET STREAM: RAW_STAGE_FILE_STREAM"]
         I --> J
         J --> K{"airflow_health_check.py"}
-        K -->|Healthy| L["airflow_api_clientV1.py (Get Auth Token)"]
-        L --> M["Airflow REST API: Unpause & Trigger DAG"]
+        K -->|Healthy| L["airflow_api_clientV1.py"]
     end
 
     subgraph Phase3 ["3. Orchestration & dbt Transformations"]
-        M --> N["DAG: 02_snowflake_dbt_pipeline"]
-        N --> O["Task 1: start_pipeline (PythonOperator)"]
-        O --> P["Task 2: Test_DBT_Snowflake_Connection (dbt debug)"]
-        P --> Q["Task 3: run_staging_models (dbt build --select staging)"]
-        Q --> R["Task 4: run_marts_models (dbt build --select marts)"]
+        M["Airflow REST API: Trigger DAG"] --> N["DAG: 02_snowflake_dbt_pipeline"]
+        N --> O["Task 1: start_pipeline"]
+        O --> P["Task 2: Test_DBT_Snowflake_Connection"]
+        P --> Q["Task 3: run_staging_models (Silver)"]
+        Q --> R["Task 4: run_marts_models (Gold)"]
     end
+
+    %% Cross-subgraph linkage without inline text on boundary link
+    L --> M
 ```
 ## 🏗️ Architecture Overview
 
