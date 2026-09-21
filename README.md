@@ -19,7 +19,8 @@ flowchart TD
         F{"snowflake_pipeline_runner.py"} -->|Check SYSTEM$STREAM_HAS_DATA| G["RAW_STAGE_FILE_STREAM"]
         G -->|Stream Has Data| H["COPY INTO raw.raw_patients"]
         G -->|Stream Has Data| I["COPY INTO raw.raw_visit"]
-        H & I --> J["CREATE OR REPLACE STREAM RAW_STAGE_FILE_STREAM"]
+        H --> J["CREATE OR REPLACE STREAM RAW_STAGE_FILE_STREAM"]
+        I --> J
         J --> K{"airflow_health_check.py"}
         K -->|Healthy| L["airflow_api_clientV1.py (Get Auth Token)"]
         L --> M["Airflow REST API: Unpause & Trigger DAG"]
@@ -32,7 +33,6 @@ flowchart TD
         P --> Q["Task 3: run_staging_models (dbt build --select staging)"]
         Q --> R["Task 4: run_marts_models (dbt build --select marts)"]
     end
----
 ```
 ## 🏗️ Architecture Overview
 
