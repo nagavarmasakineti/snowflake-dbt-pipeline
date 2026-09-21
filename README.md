@@ -6,6 +6,34 @@ This project demonstrates an automated Medallion Architecture data pipeline that
 
 ## 🏗️ Architecture Overview
 
+```mermaid
+flowchart TD
+    subgraph Local_Environment ["Local / Ingestion Layer"]
+        A[data_drop/ Raw CSVs] -->|Validation Fail| B[data_processing_failed/]
+        A -->|Validation Pass| C[scripts/01_ingest_local_data_to_snowflake.py]
+    end
+
+    subgraph Snowflake_Platform ["Snowflake Cloud Data Warehouse"]
+        C -->|PUT File| D["Internal Stage (@MY_RAW_STAGE)"]
+        D -->|Directory Stream Detection| E[COPY INTO Bronze / RAW]
+        E --> F[Bronze / RAW Layer]
+    end
+
+    subgraph Airflow_Orchestration ["Apache Airflow Engine"]
+        C -->|REST API Trigger| G[scripts/airflow_api_clientV1.py]
+        G --> H[dags/dbt_snowflake_pipeline.py]
+    end
+
+    subgraph dbt_Transformations ["dbt Core Transformation Engine"]
+        H -->|dbt build --select staging| I[Silver Layer: Staging / Cleaning]
+        H -->|dbt build --select marts| J[Gold Layer: Marts / Dimensional]
+        F --> I
+        I --> J
+    end
+```
+
+## 🏗️ Architecture Overview
+
 1. **Local File Validation & Staging (`validate_stage_files.py`)**:
    * Scans a local drop directory (`data_drop`) for inbound raw CSV files.
    * Performs schema, non-empty, and file name pattern validations.
